@@ -13,6 +13,7 @@ Via `--help`:
       -h, --help     output usage information
       -V, --version  output the version number
       -p, --pretty   pretty print output
+      -y, --yaml     yaml output
 
 ## Examples
 
@@ -81,6 +82,20 @@ whatever you want, really.
       "oauth-client_id": "walkthrough",
       "oauth-client_secret": "this-is-a-secret"
     }
+
+you can even output yaml.
+
+    λ : here-json -y < .env | sed 's,_,-,' | tr 'A-Z' 'a-z'
+
+    # yields...
+
+  ```yaml
+  ---
+    node-env: "development"
+    api-url: "https://api.walkthrough.com"
+    oauth-client_id: "walkthrough"
+    oauth-client_secret: "this-is-a-secret"
+  ```
 
 ## Test
 
