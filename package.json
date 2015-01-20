@@ -4,7 +4,6 @@
   "description": "Versatile stdin to JSON",
   "main": "index.js",
   "bin": "bin/here-json",
-
   "repository": {
     "type": "git",
     "url": "git://github.com/mndvns/here-json.git"
@@ -22,6 +21,7 @@
     "commander": "^2.6.0",
     "debug": "^2.1.1",
     "get-stdin": "^4.0.0",
+    "json2yaml": "^1.0.3",
     "whatever-format": "0.0.2"
   }
 }

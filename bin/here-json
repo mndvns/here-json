@@ -7,7 +7,8 @@ var program = require('commander');
 program
   .version(require('../package.json').version)
   .usage('[options] < stream > json')
-  .option('-p, --pretty', 'pretty print output');
+  .option('-p, --pretty', 'pretty print output')
+  .option('-y, --yaml', 'yaml output');
 
 // parse args
 var args = program.parse(process.argv);

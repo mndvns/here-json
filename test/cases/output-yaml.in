@@ -1,0 +1,5 @@
+./bin/here-json -y <<EOF
+---
+  this: is
+  some: yaml-y output
+EOF
