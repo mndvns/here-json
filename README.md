@@ -40,11 +40,11 @@ ini:
 
     # yields...
 
-    [{":c":"Vi is aoaisdjfoiasdj"},{":c":"asodijfisjd"}]%
+    {"what":{"in":"10","the":"10","world":"is this format"}}%
 
 or just pretty json:
 
-    λ : here-json --pretty <<< '{foo: {bar: {baz: [0,1,2,3,{bar:['okay','that','is','enough']}]}}}
+    λ : here-json --pretty <<< '{foo: {bar: {baz: [0,1,2,3,{bar:['okay','that','is','enough']}]}}}'
 
     # yields...
 
