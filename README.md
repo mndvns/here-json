@@ -17,7 +17,7 @@ Via `--help`:
 
 ## Examples
 
-yaml:
+### yaml input
 
     λ : here-json <<EOF
     heredoc> ---
@@ -26,11 +26,11 @@ yaml:
     heredoc> - "There are only 3 numbers of interest to a computer scientist: 1, 0 and infinity."
     heredoc> EOF
 
-    # yields...
+yields
 
     ["Vi is a subset of evil.","The difference between theory and practice is smaller in theory than in practice.","There are only 3 numbers of interest to a computer scientist: 1, 0 and infinity."]%
 
-ini:
+### ini input
 
     λ : here-json <<EOF
     heredoc> [what]
@@ -39,15 +39,15 @@ ini:
     heredoc> world = is this format
     heredoc> EOF
 
-    # yields...
+yields
 
     {"what":{"in":"10","the":"10","world":"is this format"}}%
 
-or just pretty json:
+### pretty json output
 
     λ : here-json --pretty <<< '{foo: {bar: {baz: [0,1,2,3,{bar:['okay','that','is','enough']}]}}}'
 
-    # yields...
+yields
 
     {
       "foo": {
@@ -70,24 +70,11 @@ or just pretty json:
       }
     }
 
-whatever you want, really.
-
-    λ : here-json -p < .env | sed 's,_,-,' | tr 'A-Z' 'a-z'
-
-    # yields...
-
-    {
-      "node-env": "development",
-      "api-url": "https://api.walkthrough.com",
-      "oauth-client_id": "walkthrough",
-      "oauth-client_secret": "this-is-a-secret"
-    }
-
-you can even output yaml.
+### yaml output
 
     λ : here-json -y < .env | sed 's,_,-,' | tr 'A-Z' 'a-z'
 
-    # yields...
+yields
 
   ```yaml
   ---
