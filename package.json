@@ -1,6 +1,6 @@
 {
   "name": "here-json",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Versatile stdin to JSON",
   "main": "index.js",
   "bin": "bin/here-json",
