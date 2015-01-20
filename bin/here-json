@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var hereJson = require('..');
+var program = require('commander');
+
+// cli
+program
+  .version(require('../package.json').version)
+  .usage('[options] < stream > json')
+  .option('-p, --pretty', 'pretty print output');
+
+// parse args
+var args = program.parse(process.argv);
+
+// pass options to lib
+hereJson(program);

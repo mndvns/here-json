@@ -1,0 +1,8 @@
+./bin/here-json --pretty <<EOF
+- buzz:
+  foo: bar
+  baz: 10
+- bizz: !!pairs
+  - oh my: ...
+  - what?!: 10
+EOF

@@ -1,0 +1,27 @@
+{
+  "name": "here-json",
+  "version": "0.1.0",
+  "description": "Versatile stdin to JSON",
+  "main": "index.js",
+  "bin": "bin/here-json",
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mndvns/here-json.git"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "should": "^4.6.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Michael Andrew Vanasse <mail@mndvns.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.6.0",
+    "debug": "^2.1.1",
+    "get-stdin": "^4.0.0",
+    "whatever-format": "0.0.2"
+  }
+}
