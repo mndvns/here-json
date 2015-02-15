@@ -5,6 +5,7 @@
 var stdin = require('get-stdin')
 var parse = require('whatever-format');
 var YAML = require('json2yaml');
+var pygmentize = require('pygmentize-bundled');
 
 /**
  * Expose `hereJson`
@@ -26,6 +27,18 @@ function hereJson(opts) {
     var output = !opts.yaml
      ? JSON.stringify(json, null, opts.pretty ? '  ' : '')
      : YAML.stringify(json);
-    process.stdout.write(output);
+
+    if (!opts.color)
+      return console.log(output);
+
+    var config = {
+      lang: !!opts.yaml ? 'yaml' : 'json',
+      format: !!opts.html ? 'html' : 'console'
+    };
+
+    pygmentize(config, output, function(err, result) {
+      if (err) return console.error(err);
+      process.stdout.write(result.toString());
+    });
   });
 }

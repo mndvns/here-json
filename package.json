@@ -22,6 +22,7 @@
     "debug": "^2.1.1",
     "get-stdin": "^4.0.0",
     "json2yaml": "^1.0.3",
+    "pygmentize-bundled": "^2.3.0",
     "whatever-format": "0.0.2"
   }
 }
